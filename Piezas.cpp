@@ -115,8 +115,8 @@ Piece Piezas::gameState()
         }
       }
       else if(board[row][col] == O) {
-        curx = 0;
-        curo++;
+        player1 = 0;
+        player2++;
         if(player2 > player1) {
           OScore = player2;
       }
