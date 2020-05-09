@@ -116,7 +116,7 @@ Piece Piezas::gameState()
       else if(board[row][col] == O) {
         player1 = 0;
         player2++;
-        if(curo > omax) {
+        if(player2 > player1) {
           OScore = player2;
         }
       }
