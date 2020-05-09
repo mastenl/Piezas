@@ -53,13 +53,12 @@ TEST(PiezasTest, tieGame)
 TEST(piezasTest, Xwins)
 {
   Piezas game;
-  for(int i = 0; i < row; i++) {
-    for(int j = 0; j < cols; j++) {
+  for(int i = 0; i < 4; i++) {
+    for(int j = 0; j < 3; j++) {
       game.dropPiece(j);
       game.dropPiece(0);
     }
   }
-  bool check = false;
   if(game.gameState() == X) {
     ASSERT_TRUE(true);
   }
@@ -71,13 +70,12 @@ TEST(piezasTest, Xwins)
 TEST(piezasTest, Owins)
 {
   Piezas game;
-  for(int i = 0; i < rows; i++) {
-    for(int j = 0; j < cols; j++) {
+  for(int i = 0; i < 4; i++) {
+    for(int j = 0; j < 3; j++) {
       game.dropPiece(0);
       game.dropPiece(j);
     }
   }
-  bool check = false;
   if(game.gameState() == O) {
     ASSERT_TRUE(true);
   }
