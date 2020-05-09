@@ -50,23 +50,6 @@ TEST(PiezasTest, tieGame)
   }
 }
 
-TEST(piezasTest, Xwins)
-{
-  Piezas game;
-  for(int i = 0; i < 4; i++) {
-    for(int j = 0; j < 3; j++) {
-      game.dropPiece(j);
-      game.dropPiece(0);
-    }
-  }
-  if(game.gameState() == X) {
-    ASSERT_TRUE(true);
-  }
-  else {
-    ASSERT_TRUE(false);
-  }
-}
-
 TEST(piezasTest, Owins)
 {
   Piezas game;
