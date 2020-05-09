@@ -1,4 +1,5 @@
 # Piezas
+https://travis-ci.org/mastenl/Piezas.svg?branch=master
 
 ## Associated Enumerated Types
 `Piece` has four possible values: `X`,`O`,`Invalid`, and `Blank`
