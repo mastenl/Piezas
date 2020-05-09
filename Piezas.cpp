@@ -104,6 +104,26 @@ Piece Piezas::gameState()
       }
     }
   }
+
+  for(unsigned int row=0; row<board.size(); row++) {
+    for(unsigned int col=0; col<board[row].size(); col++) {
+      if(board[row][col] == X) {
+        player2 = 0;
+        player1++;
+        if(player1 > XScore) {
+          XScore = player1;
+        }
+      }
+      else if(board[row][col] == O) {
+        curx = 0;
+        curo++;
+        if(player2 > player1) {
+          OScore = player2;
+      }
+    }
+  }
+}
+
   for(unsigned int row=0; row<board.size(); row++) {//vert
     for(unsigned int col=0; col<board[row].size(); col++) {
       if(board[row][col] == X) {
@@ -122,6 +142,7 @@ Piece Piezas::gameState()
       }
     }
   }
+
   if(XScore > OScore) {//p1win
     return X;
   }
